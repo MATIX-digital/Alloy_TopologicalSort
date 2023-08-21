@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<alloy>
+
+<view>
+
+<defaultnode/>
+
+<defaultedge/>
+
+<node>
+   <type name="Int"/>
+   <type name="String"/>
+   <type name="univ"/>
+   <type name="LinkedList/ListableObject"/>
+   <type name="LinkedList/ListSignature"/>
+   <type name="seq/Int"/>
+</node>
+
+<node color="Gray">
+   <set name="this/QueuedObjects" type="LinkedList/ListableObject"/>
+</node>
+
+<node color="Green">
+   <set name="this/NewQueuedObjects" type="LinkedList/ListableObject"/>
+</node>
+
+<node color="Yellow">
+   <type name="Workflow"/>
+</node>
+
+<node shape="House" color="Blue">
+   <type name="ExecutionOrder"/>
+</node>
+
+<edge visible="no" attribute="no">
+   <relation name="$needed_for"> <type name="LinkedList/ListableObject"/> <type name="LinkedList/ListableObject"/> </relation>
+</edge>
+
+<edge visible="no" attribute="yes">
+   <relation name="LinkedList"> <type name="LinkedList/ListSignature"/> <type name="LinkedList/ListableObject"/> <type name="LinkedList/ListableObject"/> </relation>
+</edge>
+
+</view>
+
+</alloy>
